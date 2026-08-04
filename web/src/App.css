@@ -1,0 +1,127 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.app-header {
+  padding: 8px 20px 0;
+}
+
+.subtitle {
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.app-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  min-height: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.talk-button {
+  font-size: 18px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: 2px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.1s;
+}
+
+.talk-button:hover {
+  border-color: var(--accent);
+}
+
+.talk-button:active {
+  transform: scale(0.97);
+}
+
+.talk-button.connected,
+.talk-button.connecting {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.status-pill {
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.status-pill.connected {
+  color: #1a9850;
+  border-color: #1a9850;
+}
+
+.status-pill.error {
+  color: #d64545;
+  border-color: #d64545;
+}
+
+.error-detail {
+  color: #d64545;
+  font-size: 14px;
+  text-align: center;
+}
+
+.transcript {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.transcript-empty {
+  text-align: center;
+  color: var(--text);
+  margin-top: 40px;
+}
+
+.transcript-row {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.transcript-row.assistant {
+  background: var(--accent-bg);
+}
+
+.transcript-label {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-h);
+  width: 24px;
+}
+
+.transcript-text {
+  margin: 0;
+  color: var(--text-h);
+  line-height: 150%;
+}
